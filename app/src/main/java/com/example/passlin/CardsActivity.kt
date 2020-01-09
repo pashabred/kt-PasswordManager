@@ -71,8 +71,12 @@ class CardsActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.settings -> {Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show()}
-            R.id.tips -> {Toast.makeText(this, "Tips", Toast.LENGTH_LONG).show()}
+            R.id.settings -> {
+                startActivity(Intent(this, SettingsActivity::class.java))
+            }
+            R.id.tips -> {
+                startActivity(Intent(this, TipsActivity::class.java))
+            }
         }
         return super.onOptionsItemSelected(item)
     }

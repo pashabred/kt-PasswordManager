@@ -20,6 +20,7 @@ class UserLocalStore(context: Context) {
     fun storePasswordLen(length: Int) {
         val userLocalDatabaseEditor = userLocalDatabase.edit()
         userLocalDatabaseEditor.putString("length", length.toString())
+        userLocalDatabaseEditor.apply()
     }
 
     fun returnPasswordLen(): Int {
